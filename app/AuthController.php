@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($response['code']) && $response['code'] == 2) {
         $_SESSION['user'] = $response['data']['email'];  
         $_SESSION['token'] = $response['data']['token'];  
-        header("Location: " . BASE_URL . "tpm/dashboard/index.html");  
+        header("Location: /EXAMEN_U4/tpm/dashboard/index.html");  
         exit();  
     } else {
         $_SESSION['error'] = $response['message'] ?? "Credenciales incorrectas.";

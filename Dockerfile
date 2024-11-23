@@ -1,11 +1,12 @@
-# Usa una imagen PHP oficial
-FROM php:8.0-apache
+# Dockerfile para PHP
+FROM php:8.1-apache
+WORKDIR /var/www/html
 
-# Copia los archivos del proyecto al contenedor
-COPY . /var/www/html/
+# Copiar todos los archivos al contenedor
+COPY . .
 
-# Expón el puerto 10000
-EXPOSE 10000
+# Habilitar reescritura para Apache
+RUN a2enmod rewrite
 
-# Comando de inicio para ejecutar el servidor PHP
+# Configurar el servidor para servir el proyecto
 CMD ["php", "-S", "0.0.0.0:10000", "-t", "/var/www/html"]
