@@ -1,7 +1,7 @@
 {
-  "name": "examen_u4",
+  "name": "marco/examen-u4",
   "require": {
       "php": "^8.0",
-      "vlucas/phpdotenv": "^5.4" 
+      "vlucas/phpdotenv": "^5.4"
   }
 }
