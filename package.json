@@ -4,7 +4,7 @@
   "description": "Proyecto PHP desplegado en Render",
   "main": "index.php",
   "scripts": {
-      "start": "php -S 0.0.0.0:10000"
+      "start": "php -S 0.0.0.0:10000 -t public"
   },
   "author": "Marco",
   "license": "MIT"
