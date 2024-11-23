@@ -776,7 +776,7 @@ if (!$Coupon || !isset($Coupon['data'])) {
                                         </span>
                                     </p>
                                     <div class="d-flex justify-content-between">
-                                        <a href="/EXAMEN_U4/tpm/application/coupon_details.php?action=details&id=<?= $Coupon['id'] ?>" 
+                                        <a href="/EXAMEN_U4/examen/tpm/application/coupon_details.php?action=details&id=<?= $Coupon['id'] ?>" 
                                            class="btn btn-info btn-sm">
                                            <i class="bi bi-eye"></i> Detalles
                                         </a>

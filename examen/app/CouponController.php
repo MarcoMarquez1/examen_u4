@@ -69,7 +69,7 @@ if (isset($_GET['action'])) {
        
         case 'details':
             if (isset($_GET['id'])) {
-                header("Location: /EXAMEN_U4/tpm/application/coupon_details.php?id=" . $_GET['id']);
+                header("Location: /EXAMEN_U4/examen/tpm/application/coupon_details.php?id=" . $_GET['id']);
             }
             break;
 

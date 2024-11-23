@@ -188,7 +188,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
 
             $responseData = json_decode($response, true);
             if (isset($responseData['message']) && $responseData['message'] === 'Registro creado correctamente') {
-                header("Location: /EXAMEN_U4/tpm/application/products.php");
+                header("Location: /EXAMEN_U4/examen/tpm/application/products.php");
                 exit();
             } else {
                 echo "Error al crear el producto: " . ($responseData['message'] ?? 'Error desconocido');
@@ -230,7 +230,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
 
                 $responseData = json_decode($response, true);
                 if (isset($responseData['message']) && $responseData['message'] === 'Producto actualizado correctamente') {
-                    header("Location: /EXAMEN_U4/tpm/application/products.php");
+                    header("Location: /EXAMEN_U4/examen/tpm/application/products.php");
                     exit();
                 } else {
                     echo "Error al actualizar el producto: " . ($responseData['message'] ?? 'Error desconocido');

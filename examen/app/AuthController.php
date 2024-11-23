@@ -8,18 +8,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'] ?? '';
     if (empty($email) || empty($password)) {
         $_SESSION['error'] = "Por favor, complete todos los campos.";
-        header("Location: /EXAMEN_U4/index.php");
+        header("Location: /EXAMEN_U4/examen/index.php");
         exit();
     }
     $response = login($email, $password);
     if (isset($response['code']) && $response['code'] == 2) {
         $_SESSION['user'] = $response['data']['email'];  
         $_SESSION['token'] = $response['data']['token'];  
-        header("Location: /EXAMEN_U4/tpm/dashboard/index.html");  
+        header("Location: /EXAMEN_U4/examen/tpm/dashboard/index.html");  
         exit();  
     } else {
         $_SESSION['error'] = $response['message'] ?? "Credenciales incorrectas.";
-        header("Location: /EXAMEN_U4/index.php");  
+        header("Location: /EXAMEN_U4/examen/index.php");  
         exit();
     }
 }
