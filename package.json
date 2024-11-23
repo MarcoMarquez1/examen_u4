@@ -1,0 +1,11 @@
+{
+  "name": "examen_u4",
+  "version": "1.0.0",
+  "description": "Proyecto PHP desplegado en Render",
+  "main": "index.php",
+  "scripts": {
+      "start": "php -S 0.0.0.0:10000"
+  },
+  "author": "Marco",
+  "license": "MIT"
+}

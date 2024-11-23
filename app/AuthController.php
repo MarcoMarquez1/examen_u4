@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'] ?? '';
     if (empty($email) || empty($password)) {
         $_SESSION['error'] = "Por favor, complete todos los campos.";
-        header("Location: /EXAMEN_U4/index.html");
+        header("Location: /EXAMEN_U4/index.php");
         exit();
     }
     $response = login($email, $password);
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();  
     } else {
         $_SESSION['error'] = $response['message'] ?? "Credenciales incorrectas.";
-        header("Location: /EXAMEN_U4/index.html");  
+        header("Location: /EXAMEN_U4/index.php");  
         exit();
     }
 }
