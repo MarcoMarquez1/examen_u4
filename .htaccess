@@ -1,9 +1,0 @@
-RewriteEngine On
-# Redirigir todas las solicitudes al índice principal
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ index.php [QSA,L]
-
-# Si los archivos existen (como dashboard/index.html), sírvelos directamente
-RewriteCond %{REQUEST_FILENAME} -f
-RewriteRule ^(.*)$ $1 [L]
